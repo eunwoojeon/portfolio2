@@ -1,0 +1,23 @@
+{
+  "name": "portfolio2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eunwoojeon/portfolio2.git"
+  },
+  "author": "Eunwoo Jeon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eunwoojeon/portfolio2/issues"
+  },
+  "homepage": "https://github.com/eunwoojeon/portfolio2#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
