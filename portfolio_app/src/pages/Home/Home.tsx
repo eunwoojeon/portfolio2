@@ -4,6 +4,7 @@ import Navigation from '../../components/Navigation/Navigation'
 import Section from '../../components/Section/Section'
 import Intro from '../../components/Intro/Intro'
 import { Props, ProjectProps } from '../../model/types'
+import Footer from '../../components/Footer/Footer'
 
 const Home: React.FC = () => {
   return (
@@ -20,13 +21,13 @@ const Home: React.FC = () => {
           carear={[
             {
               company: "스트라토아이티",
-              duration: "2022-07~2023-3",
-              description: "설명"
+              duration: "2022-07 ~ 2023-3",
+              description: ["설명1", "설명2", "설명3"]
             },
             {
               company: "프로텍",
-              duration: "2023-3~2023-11",
-              description: "설명"
+              duration: "2023-3 ~ 2023-11",
+              description: ["설명1", "설명2", "설명3"]
             }
           ]}
         />
@@ -34,20 +35,23 @@ const Home: React.FC = () => {
           title='Project'
           projects={[
             {
-              description: '테트리스',
-              skill: 'javascript',
-              implement: '- dddd',
-              github: 'www'
+              name: '테트리스',
+              skill: ['Javascript', 'CSS', 'html'],
+              implement: ["설명1", "설명2", "설명3"],
+              github: 'http://www.naver.com',
+              link: 'http://www.naver.com'
             },
             {
-              description: '테트리스',
-              skill: 'javascript',
-              implement: '- dddd',
-              github: 'www'
+              name: '테트리스',
+              skill: ['Javascript', 'CSS', 'html'],
+              implement: ["설명1", "설명2", "설명3"],
+              github: 'http://www.naver.com',
+              link: 'http://www.naver.com'
             }
           ]}
         />
       </main>
+      <Footer />
     </div>
   )
 }
