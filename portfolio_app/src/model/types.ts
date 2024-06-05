@@ -1,11 +1,18 @@
 export type Props = {
   title: string;
-  contents: string;
-  project?: ProjectProps;
+  contents?: string;
+  carear?: CarearProps[];
+  projects?: ProjectProps[];
+}
+
+export type CarearProps = {
+  company: string;
+  duration: string;
+  description: string;
 }
 
 export type ProjectProps = {
-  intro: string;
+  description: string;
   skill: string;
   implement: string;
   github: string;

@@ -1,0 +1,30 @@
+.title {
+    border-left: 0.3rem solid orange;
+    padding-left: 0.6rem;
+}
+
+.contents {
+    padding: 1rem;
+}
+
+.carear-list {
+    padding: 1rem;
+}
+
+.company {
+
+}
+
+.duration {
+    float: right;
+}
+
+.project-list {
+    padding: 1rem;
+}
+
+@media screen and (max-width: 769px) {
+    .section {
+
+    }
+}

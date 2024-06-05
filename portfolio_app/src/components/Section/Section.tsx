@@ -1,11 +1,22 @@
 import React from 'react'
 import styles from './Section.module.css'
-import { Props, ProjectProps } from '../../model/types'
+import { Props, CarearProps, ProjectProps } from '../../model/types'
 
-const Project: React.FC<ProjectProps> = ({ intro, skill, implement, github }) => {
+const Carear: React.FC<CarearProps> = ({ company, duration, description }) => {
   return (
-    <div>
-      <div><span>Intro</span><span>{intro}</span></div>
+    <div className={styles['carear-list']}>
+      <div><span className={styles.company}>{company}</span><span className={styles.duration}>{duration}</span></div>
+      <hr />
+      <div>{description}</div>
+    </div>
+  )
+}
+
+const Project: React.FC<ProjectProps> = ({ description, skill, implement, github }) => {
+  return (
+    <div className={styles['project-list']}>
+      <div><span>{description}</span></div>
+      <hr />
       <div><span>Skill</span><span>{skill}</span></div>
       <div><span>주요 기능</span><span>{implement}</span></div>
       <div><span>Github</span><span>{github}</span></div>
@@ -13,12 +24,17 @@ const Project: React.FC<ProjectProps> = ({ intro, skill, implement, github }) =>
   )
 }
 
-const Section: React.FC<Props> = ({ title, contents, project }) => {
+const Section: React.FC<Props> = ({ title, contents, carear, projects }) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <div>{contents}</div>
-      {(project !== undefined) ? <Project intro={project.intro} skill={project.skill} implement={project.implement} github={project.github}/> : null}
+    <div className={styles.section}>
+      <h1 className={styles.title}>{title}</h1>
+      {contents && <div className={styles.contents}>{contents}</div>}
+      {carear?.map((carear: CarearProps) => (
+        <Carear company={carear.company} duration={carear.duration} description={carear.description} />
+      ))}
+      {projects?.map((project: ProjectProps) => (
+        <Project description={project.description} skill={project.skill} implement={project.implement} github={project.github} />
+      ))}
     </div>
   )
 }
